@@ -339,7 +339,7 @@
     z-index: 200;
     position: relative;
     overflow: hidden;
-    background-color: #a73c3c;
+    /* background-color: #a73c3c; */
 }
 
 .carousels-container {
@@ -1405,7 +1405,7 @@ button {
 
 .app-container {
     display: none;
-    background-color: #a73c3c;
+    /* background-color: #a73c3c; */
     width: 1920px;
     height: 1080px;
     overflow: hidden;
@@ -3458,7 +3458,7 @@ button {
 
 .carousel-menu {
     left: 400px;
-    background-color: #a73c3c;
+    /* background-color: #a73c3c; */
     display: block;
     height: 140px;
     z-index: 300;
@@ -3518,7 +3518,7 @@ button {
 .home-logo-bg {
     z-index: 500;
     height: 140px;
-    background: #a73c3c;
+    /* background: #a73c3c; */
     width: 400px;
     position: absolute;
     top: 0px;
@@ -3703,4 +3703,10 @@ button {
 
 .authOptionList li {
     border-radius: 5px;
+}
+#home-logo-id{
+    color: white;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
 }
