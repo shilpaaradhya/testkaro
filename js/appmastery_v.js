@@ -14023,6 +14023,9 @@ function notifyFulfillment(receiptId) {
 
 }
 
+
+
+
 function buySubscription(clickedSku) {
     if (window.AmazonIapV2 == null) {
         Popup.showError("Error", "Couldn't talk to Amazon appstore, please try again later.", 1, 1);
@@ -14052,3 +14055,4 @@ function handleReceipt(response) {
     Server.iap_registration();
 
 }
+
