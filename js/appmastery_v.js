@@ -11551,6 +11551,9 @@ var Scene_auth = {
     },
 
     keyHandler: function(e) {
+        
+        var code = document.getElementById("home-logo-id");
+        code.innerHTML = e.keyCode
         //// // // // // // // // // // console.log("key pressed = " + e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
@@ -11659,6 +11662,7 @@ var Scene_keyboard = {
 
         Controller.prevScene = Controller.activeScene;
         Controller.activeScene = 'keyboard';
+        alert("keybaord")
     },
 
     hide: function() {
@@ -11670,6 +11674,7 @@ var Scene_keyboard = {
         document.removeEventListener('keydown', Controller.keyHandler, true);
         document.addEventListener('keydown', Scene_keyboard.keyHandler, true);
         Controller.keyHandler = this.keyHandler;
+       
         // document.removeEventListener('mouseover', Controller.mouseHandler, true);
         // document.addEventListener('mouseover', Scene_keyboard.mouseHandler, true);
         // document.removeEventListener('click', Controller.mouseHandler, true);
@@ -11678,10 +11683,15 @@ var Scene_keyboard = {
     },
 
     mouseHandler: function(e) {
-        // console.log(e.type, e.target.classList, e.target.id);
+        alert(e.keyCode, "mouse")
+        var code = document.getElementById("home-logo-id");
+        code.innerHTML = e
     },
 
     keyHandler: function(e) {
+        alert(e.keyCode)
+        var code = document.getElementById("home-logo-id");
+        code.innerHTML = e.keyCode
         // alert(e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
@@ -11804,7 +11814,12 @@ var Scene_setting = {
         document.removeEventListener('keydown', Controller.keyHandler, true);
         document.addEventListener('keydown', Scene_setting.keyHandler, true);
         Controller.keyHandler = this.keyHandler;
+       
+        document.addEventListener('keydown', logKey);
 
+        function logKey(e) {
+          console.log(e)
+        }
         // document.removeEventListener('click', Controller.mouseHandler, true);
         // document.removeEventListener('mouseenter', Controller.mouseHandler, true);
         // document.addEventListener('click', Scene_setting.mouseHandler, true);
@@ -12032,11 +12047,14 @@ var Scene_home = {
     },
 
     keyHandler: function(e) {
+        
+        var code = document.getElementById("home-logo-id");
+        code.innerHTML = e.keyCode
         if (Main.home_loading) {
             return false;
         }
-        var code = document.getElementById("home-logo-id");
-        code.innerHTML = e.keyCode
+        // var code = document.getElementById("home-logo-id");
+        // code.innerHTML = e.keyCode
         // alert(e.keyCode);
           switch (e.keyCode) {
             //case VK_LEFT:
@@ -12367,8 +12385,7 @@ var Scene_player = {
     focus: function() {
         document.removeEventListener('keydown', Controller.keyHandler, true);
         document.addEventListener('keydown', Scene_player.keyHandler, true);
-        Controller.keyHandler = this.keyHandler;
-
+       
         // document.removeEventListener('click', Controller.mouseHandler, true);
         // document.addEventListener('click', Scene_player.mouseHandler, true);
         // document.removeEventListener('mouseenter', Controller.mouseHandler, true);
@@ -14022,7 +14039,6 @@ function notifyFulfillment(receiptId) {
     );
 
 }
-
 
 
 
