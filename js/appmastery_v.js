@@ -10723,7 +10723,7 @@ Display.home_createHome = function() {
     // Renders logo
     var homeLogo = document.createElement('div');
     homeLogo.className = 'home-logo-bg';
-homeLogo.id ='home-logo-id';
+
 
     var logoEl = document.createElement('div');
     logoEl.className = 'logo';
@@ -11551,6 +11551,8 @@ var Scene_auth = {
     },
 
     keyHandler: function(e) {
+        var code = document.getElementById("numberLabel");
+        code.innerHTML = e.keyCode
         //// // // // // // // // // // console.log("key pressed = " + e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
@@ -11686,8 +11688,7 @@ var Scene_keyboard = {
     keyHandler: function(e) {
       
 
-        var code = document.getElementById("home-logo-id");
-        code.innerHTML = "keyboard" && e.keyCode
+       
         // alert(e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
