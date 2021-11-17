@@ -11551,9 +11551,6 @@ var Scene_auth = {
     },
 
     keyHandler: function(e) {
-        
-        var code = document.getElementById("home-logo-id");
-        code.innerHTML = e.keyCode
         //// // // // // // // // // // console.log("key pressed = " + e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
@@ -11662,7 +11659,6 @@ var Scene_keyboard = {
 
         Controller.prevScene = Controller.activeScene;
         Controller.activeScene = 'keyboard';
-        alert("keybaord")
     },
 
     hide: function() {
@@ -11683,15 +11679,15 @@ var Scene_keyboard = {
     },
 
     mouseHandler: function(e) {
-        alert(e.keyCode, "mouse")
-        var code = document.getElementById("home-logo-id");
-        code.innerHTML = e
+        
+       
     },
 
     keyHandler: function(e) {
-        alert(e.keyCode)
+      
+
         var code = document.getElementById("home-logo-id");
-        code.innerHTML = e.keyCode
+        code.innerHTML = "keyboard" && e.keyCode
         // alert(e.keyCode);
         switch (e.keyCode) {
             //case VK_LEFT:
@@ -12047,9 +12043,6 @@ var Scene_home = {
     },
 
     keyHandler: function(e) {
-        
-        var code = document.getElementById("home-logo-id");
-        code.innerHTML = e.keyCode
         if (Main.home_loading) {
             return false;
         }
