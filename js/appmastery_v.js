@@ -9477,6 +9477,7 @@ Auth.showContact = function() {
 }
 
 Auth.handleEnter = function() {
+    
     if (this.currentVisible === "authOptions") {
         if (this.authOptionsLi[this.authOptionPosition].dataset.name === "browse") {
             // hide everything and start the app
@@ -11606,6 +11607,28 @@ var Scene_auth = {
                 Auth.handleEnter();
                 //    Display.auth_enter();
                 break;
+                case 228:
+                    e.preventDefault();
+                    e.stopPropagation();
+                    Auth.handleDown();
+                    Auth.username_focused = false;
+                    Auth.password_focused = false;
+                    //  e.preventDefault();
+                    //  e.stopPropagation();
+                    // Auth.handleEnter();
+                    //    Display.auth_enter();
+                    break;
+                    case 227:
+                        e.preventDefault();
+                        e.stopPropagation();
+                        Auth.handleDown();
+                        Auth.username_focused = false;
+                        Auth.password_focused = false;
+                        //  e.preventDefault();
+                        //  e.stopPropagation();
+                        // Auth.handleEnter();
+                        //    Display.auth_enter();
+                        break;
 
             case 10009:
             case 27:
